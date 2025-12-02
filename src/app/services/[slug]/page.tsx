@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle, AlertTriangle, ShieldCheck } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 type ServiceDetailPageProps = {
   params: {
@@ -57,7 +57,7 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
                   src={serviceImage.imageUrl}
                   alt={service.title}
                   data-ai-hint={serviceImage.imageHint}
-                  fill
+                  layout="fill"
                   className="object-cover rounded-t-lg"
                 />
               </CardHeader>
