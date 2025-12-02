@@ -31,7 +31,12 @@ const prompt = ai.definePrompt({
   output: {schema: GenerateServiceDetailsOutputSchema},
   prompt: `You are an expert in eye care services.
 
-  Generate detailed information about the following eye care service, including benefits, risks, and the procedure itself.
+  Generate detailed information about the following eye care service.
+  The response should be structured into three sections: "Procedure", "Benefits", and "Risks".
+
+  - The "Procedure" section should describe the steps involved.
+  - The "Benefits" section must contain at least 3 bullet points.
+  - The "Risks" section must contain at least 3 bullet points.
 
   Service Name: {{{serviceName}}}
   `,
