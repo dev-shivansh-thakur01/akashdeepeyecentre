@@ -25,7 +25,7 @@ export function Header() {
         <nav className="hidden items-center gap-1 text-sm font-medium md:flex">
           {navLinks.map(link => (
             <Link
-              key={link.href}
+              key={link.label}
               href={link.href}
               className={cn(
                 'rounded-md px-3 py-2 transition-colors hover:bg-accent hover:text-accent-foreground',
@@ -55,7 +55,7 @@ export function Header() {
               <div className="mt-6 flex flex-col space-y-4">
                 {navLinks.map(link => (
                   <Link
-                    key={link.href}
+                    key={link.label}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
                     className={cn(
