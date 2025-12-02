@@ -34,56 +34,63 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-background py-16 md:py-24">
-        <div className="container mx-auto -mt-48">
-            <div className="rounded-lg bg-primary p-12 text-center text-primary-foreground shadow-2xl">
-                <h2 className="mb-8 text-3xl font-bold md:text-4xl">Our Locations</h2>
-                <div className="grid grid-cols-1 gap-8 text-left md:grid-cols-3">
-                    {locations.map((location) => (
-                        <div key={location.name} className="flex items-start gap-4">
-                             <MapPin className="mt-1 h-8 w-8 flex-shrink-0 text-accent" />
-                             <div>
-                                <h3 className="text-xl font-bold uppercase">{location.name}</h3>
-                                <p className="mt-1 text-primary-foreground/80">{location.address}</p>
-                             </div>
-                        </div>
-                    ))}
-                </div>
+      <section className="bg-secondary py-16 md:py-24">
+        <div className="container mx-auto">
+            <div className="text-center">
+                <h2 className="text-3xl font-bold text-primary md:text-4xl">Our Locations</h2>
+                <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+                    We have several clinics to serve you. Find the one nearest to you.
+                </p>
+            </div>
+            <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
+                {locations.map((location) => (
+                    <Card key={location.name} className="flex flex-col text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <CardHeader>
+                            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                                <MapPin className="h-8 w-8" />
+                            </div>
+                        </CardHeader>
+                        <CardContent className="flex-grow">
+                            <CardTitle className="text-xl text-primary">{location.name}</CardTitle>
+                            <p className="mt-2 text-muted-foreground">{location.address}</p>
+                        </CardContent>
+                    </Card>
+                ))}
             </div>
         </div>
       </section>
 
-      <section className="container mx-auto py-16 md:py-8">
+      <section className="container mx-auto py-16 md:py-24">
         <Card>
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="p-8">
-              <h2 className="text-2xl font-bold text-primary">Get in Touch</h2>
-              <p className="mt-2 text-muted-foreground">
+              <h2 className="text-3xl font-bold text-primary">Get in Touch</h2>
+              <p className="mt-2 text-lg text-muted-foreground">
                 Our team is available to assist you during business hours.
               </p>
               <ul className="mt-8 space-y-6">
                 <li className="flex items-start gap-4">
-                  <div className="mt-1 flex-shrink-0">
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-secondary">
                     <Phone className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold">Phone</h3>
+                    <h3 className="text-xl font-semibold">Phone</h3>
                     <p className="text-muted-foreground">{contactDetails.phone}</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
-                  <div className="mt-1 flex-shrink-0">
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-secondary">
                     <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold">Email</h3>
+                    <h3 className="text-xl font-semibold">Email</h3>
                     <p className="text-muted-foreground">{contactDetails.email}</p>
                   </div>
                 </li>
               </ul>
               <div className="mt-8 border-t pt-8">
-                <h3 className="font-semibold">Business Hours</h3>
-                <p className="text-muted-foreground">Monday - Friday: 9:00 AM - 5:00 PM</p>
+                <h3 className="text-xl font-semibold">Business Hours</h3>
+                <p className="mt-2 text-muted-foreground">Monday - Friday: 9:00 AM - 5:00 PM</p>
                 <p className="text-muted-foreground">Saturday: 9:00 AM - 1:00 PM</p>
                 <p className="text-muted-foreground">Sunday: Closed</p>
               </div>
@@ -98,7 +105,7 @@ export default function ContactPage() {
                     fill
                     className="object-cover lg:rounded-r-lg"
                   />
-                  <div className="absolute inset-0 bg-black/30 text-white flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 text-white opacity-0 transition-opacity duration-300 hover:opacity-100">
                     <p className="text-lg font-semibold">Click to open in Google Maps</p>
                   </div>
                 </Link>
