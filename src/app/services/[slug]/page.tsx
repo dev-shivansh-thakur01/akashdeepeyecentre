@@ -5,6 +5,8 @@ import { PageHeader } from '@/components/PageHeader';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle, AlertTriangle, ShieldCheck } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+import Image from 'next/image';
 
 type ServiceDetailPageProps = {
   params: {
@@ -31,6 +33,8 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
   if (!service) {
     notFound();
   }
+  
+  const serviceImage = PlaceHolderImages.find(p => p.id === service.imageId);
 
   const aiResponse = await generateServiceDetails({ serviceName: service.title });
   
@@ -47,6 +51,17 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
           <div className="lg:col-span-2">
             <Card>
+            {serviceImage && (
+              <CardHeader className="relative h-80 w-full p-0">
+                <Image
+                  src={serviceImage.imageUrl}
+                  alt={service.title}
+                  data-ai-hint={serviceImage.imageHint}
+                  fill
+                  className="object-cover rounded-t-lg"
+                />
+              </CardHeader>
+            )}
               <CardHeader>
                 <CardTitle className="text-2xl text-primary">About the Procedure</CardTitle>
               </CardHeader>
