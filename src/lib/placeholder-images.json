@@ -73,6 +73,18 @@
       "imageHint": "retina scan"
     },
     {
+      "id": "service-refraction",
+      "description": "Optometrist performing an eye exam with a phoropter.",
+      "imageUrl": "https://images.unsplash.com/photo-1517948430535-1e2469d314fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxleWUlMjBleGFtfGVufDB8fHx8MTc2NDY1OTE0MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "eye exam"
+    },
+    {
+      "id": "service-refractive-surgery",
+      "description": "A patient undergoing a refractive surgery procedure.",
+      "imageUrl": "https://images.unsplash.com/photo-1551601651-09492b5468b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxleWUlMjBzdXJnZXJ5fGVufDB8fHx8MTc2NDY5MTY0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "eye surgery"
+    },
+    {
       "id": "testimonial-1",
       "description": "Happy patient giving a testimonial.",
       "imageUrl": "https://images.unsplash.com/photo-1733400316516-904674b0d1fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwYXRpZW50JTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY0NjU5MjU1fDA&ixlib=rb-4.1.0&q=80&w=1080",

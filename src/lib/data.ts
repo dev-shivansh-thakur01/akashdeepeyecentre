@@ -1,5 +1,5 @@
 import type { NavLink, Service, TeamMember, Testimonial, GalleryImage } from './types';
-import { Eye, Shield, Gem, BrainCircuit, Users, HeartHandshake, BookOpen, Phone, Map, Briefcase } from 'lucide-react';
+import { Eye, Shield, Gem, BrainCircuit, Users, HeartHandshake, BookOpen, Phone, Map, Briefcase, Glasses } from 'lucide-react';
 
 export const navLinks: NavLink[] = [
   { href: '/', label: 'Home' },
@@ -46,6 +46,24 @@ export const services: Service[] = [
     longDescription: 'Our retina specialists are equipped to diagnose and treat a wide range of conditions affecting the retina, including diabetic retinopathy, macular degeneration, and retinal detachments.',
     icon: BrainCircuit,
     imageId: 'service-retina',
+  },
+  {
+    id: 5,
+    slug: 'refraction-and-spectacle-services',
+    title: 'Refraction and Spectacle Services',
+    description: 'Precise vision testing and a wide range of stylish and functional eyewear.',
+    longDescription: 'Our comprehensive eye exams ensure an accurate prescription. We offer a wide selection of frames and lenses to suit your style and visual needs, from single vision to progressive lenses.',
+    icon: Glasses,
+    imageId: 'service-refraction',
+  },
+  {
+    id: 6,
+    slug: 'refractive-surgery',
+    title: 'Refractive Surgery',
+    description: 'Advanced procedures to correct vision and reduce dependence on glasses.',
+    longDescription: 'Beyond LASIK, we offer various refractive surgery options like PRK and ICL to correct nearsightedness, farsightedness, and astigmatism, tailored to your specific eye structure and lifestyle.',
+    icon: Eye,
+    imageId: 'service-refractive-surgery',
   },
 ];
 
