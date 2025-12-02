@@ -1,4 +1,4 @@
-import type { NavLink, Service, TeamMember, Testimonial, GalleryImage } from './types';
+import type { NavLink, Service, TeamMember, Testimonial, GalleryImage, Location } from './types';
 import { Eye, Shield, Gem, BrainCircuit, Users, HeartHandshake, BookOpen, Phone, Map, Briefcase, Glasses } from 'lucide-react';
 
 export const navLinks: NavLink[] = [
@@ -144,6 +144,21 @@ export const aboutPageStats = [
     { icon: Briefcase, value: "20+", label: "Years of Experience" },
     { icon: HeartHandshake, value: "5,000+", label: "Successful Surgeries" },
     { icon: BookOpen, value: "15+", label: "Published Researches" },
+];
+
+export const locations: Location[] = [
+    {
+        name: "NOIDA",
+        address: "c2C Sector 55, Near Radisson Hotel Noida"
+    },
+    {
+        name: "VAISHALI",
+        address: "Sector 5, Plot 699, Vaishali Ghaziabad."
+    },
+    {
+        name: "MODINAGAR",
+        address: "Bharat Bhawan, Raj Chopla, Modinagar."
+    }
 ];
 
 export const contactDetails = {

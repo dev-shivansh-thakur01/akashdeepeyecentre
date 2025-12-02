@@ -19,6 +19,12 @@
       "imageHint": "ophthalmic equipment"
     },
     {
+      "id": "contact-hero",
+      "description": "A young child getting an eye exam.",
+      "imageUrl": "https://images.unsplash.com/photo-1504629472332-9a27f607a5af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjaGlsZCUyMGV5ZSUyMGV4YW18ZW58MHx8fHwxNzY1Mjc1NTEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "child eye exam"
+    },
+    {
       "id": "clinic-interior",
       "description": "Bright and clean interior of the eye clinic waiting area.",
       "imageUrl": "https://images.unsplash.com/photo-1665231795856-769fb08a90bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjbGluaWMlMjBpbnRlcmlvcnxlbnwwfHx8fDE3NjQ2MzUxNjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -39,7 +45,7 @@
     {
       "id": "team-2",
       "description": "Portrait of Dr. Ben Carter, LASIK Specialist.",
-      "imageUrl": "https://images.unsplash.com/photo-1612349316228-5942a9b489c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkb2N0b3IlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjQ2MTYzMzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1612349316228-5942a9b489c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkb2N0b3IlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjQ2MTYzMzN8MA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "doctor portrait"
     },
     {
@@ -75,31 +81,31 @@
     {
       "id": "service-refraction",
       "description": "Optometrist performing an eye exam with a phoropter.",
-      "imageUrl": "https://images.unsplash.com/photo-1517948430535-1e2469d314fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxleWUlMjBleGFtfGVufDB8fHx8MTc2NDY1OTE0MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1517948430535-1e2469d314fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxleWUlMjBleGFtfGVufDB8fHx8MTc2NDY1OTE0MXww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "eye exam"
     },
     {
       "id": "service-refractive-surgery",
       "description": "A patient undergoing a refractive surgery procedure.",
-      "imageUrl": "https://images.unsplash.com/photo-1551601651-09492b5468b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxleWUlMjBzdXJnZXJ5fGVufDB8fHx8MTc2NDY5MTY0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1551601651-09492b5468b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxleWUlMjBzdXJnZXJ5fGVufDB8fHx8MTc2NDY5MTY0MHww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "eye surgery"
     },
     {
       "id": "testimonial-1",
       "description": "Happy patient giving a testimonial.",
-      "imageUrl": "https://images.unsplash.com/photo-1733400316516-904674b0d1fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwYXRpZW50JTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY0NjU5MjU1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1733400316516-904674b0d1fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwYXRpZW50JTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY0NjU5MjU1fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "patient portrait"
     },
     {
       "id": "testimonial-2",
       "description": "Another satisfied patient.",
-      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc2NDY2NTY0OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc2NDY2NTY0OHww&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "person smiling"
     },
     {
       "id": "testimonial-3",
       "description": "Elderly patient with improved vision.",
-      "imageUrl": "https://images.unsplash.com/photo-1630250273516-94652c938900?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxlbGRlcmx5JTIwcGVyc29ufGVufDB8fHx8MTc2NDY0OTcwNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1630250273516-94652c938900?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxlbGRlcmx5JTIwcGVyc29ufGVufDB8fHx8MTc2NDY0OTcwNHww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "elderly person"
     },
     {
@@ -111,37 +117,37 @@
     {
       "id": "gallery-1-after",
       "description": "Patient's clear vision after cataract surgery.",
-      "imageUrl": "https://images.unsplash.com/photo-1761896892087-7e36f6abb684?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2xlYXIlMjB2aXNpb258ZW58MHx8fHwxNzY0NjkwMjYzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1761896892087-7e36f6abb684?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2xlYXIlMjB2aXNpb258ZW58MHx8fHwxNzY0NjkwMjYzfDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "clear vision"
     },
     {
       "id": "gallery-2-before",
       "description": "Patient's eyesight before LASIK.",
-      "imageUrl": "https://images.unsplash.com/photo-1705357311681-17449eb278d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx2aXNpb24lMjBjaGFydHxlbnwwfHx8fDE3NjQ2OTAyNjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1705357311681-17449eb278d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx2aXNpb24lMjBjaGFydHxlbnwwfHx8fDE3NjQ2OTAyNjd8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "vision chart"
     },
     {
       "id": "gallery-2-after",
       "description": "Patient's 20/20 vision after LASIK.",
-      "imageUrl": "https://images.unsplash.com/photo-1763828181685-5e55f0db0200?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzaGFycCUyMHZpc2lvbnxlbnwwfHx8fDE3NjQ2OTAyNjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1763828181685-5e55f0db0200?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzaGFycCUyMHZpc2lvbnxlbnwwfHx8fDE3NjQ2OTAyNjN8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "sharp vision"
     },
     {
       "id": "gallery-3-before",
       "description": "Eye with retinal issue before treatment.",
-      "imageUrl": "https://images.unsplash.com/photo-1709842272652-c9a343b63103?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkYW1hZ2VkJTIwcmV0aW5hfGVufDB8fHx8MTc2NDY5MDI2NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1709842272652-c9a343b63103?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkYW1hZ2VkJTIwcmV0aW5hfGVufDB8fHx8MTc2NDY5MDI2NHww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "damaged retina"
     },
     {
       "id": "gallery-3-after",
       "description": "Healthy eye after successful retinal care.",
-      "imageUrl": "https://images.unsplash.com/photo-1648999291185-0ac34a6dc3ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxoZWFsdGh5JTIwZXllfGVufDB8fHx8MTc2NDY5MDI2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1648999291185-0ac34a6dc3ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxoZWFsdGh5JTIwZXllfGVufDB8fHx8MTc2NDY5MDI2M3ww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "healthy eye"
     },
     {
       "id": "contact-map",
       "description": "A map showing the location of the eye clinic.",
-      "imageUrl": "https://images.unsplash.com/photo-1581922819941-6ab31ab79afc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjaXR5JTIwbWFwfGVufDB8fHx8MTc2NDYyNjg4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1581922819941-6ab31ab79afc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjaXR5JTIwbWFwfGVufDB8fHx8MTc2NDYyNjg4Nnww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "city map"
     }
   ]

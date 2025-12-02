@@ -38,3 +38,8 @@ export type GalleryImage = {
     beforeImageId: string;
     afterImageId: string;
 }
+
+export type Location = {
+    name: string;
+    address: string;
+}
