@@ -16,7 +16,7 @@ export default function TestimonialsPage() {
       <section className="container mx-auto py-16 md:py-24">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map(testimonial => (
-            <Card key={testimonial.id} className="flex flex-col">
+            <Card key={testimonial.id} className="flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
               <CardContent className="flex flex-grow flex-col justify-between p-6">
                 <Quote className="h-8 w-8 text-primary/50" />
                 <blockquote className="my-4 flex-grow text-lg text-muted-foreground">

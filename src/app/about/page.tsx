@@ -62,7 +62,7 @@ export default function AboutPage() {
           </p>
           <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {team.map(member => (
-              <Card key={member.id} className="text-left">
+              <Card key={member.id} className="text-left transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
                 <CardHeader className="items-center">
                   <Avatar className="h-32 w-32">
                     <AvatarImage src={PlaceHolderImages.find(p => p.id === member.imageId)?.imageUrl} alt={member.name} data-ai-hint="doctor portrait" />

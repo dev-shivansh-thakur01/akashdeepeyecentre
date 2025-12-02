@@ -41,7 +41,7 @@ export default function Home() {
             ))}
           </CarouselContent>
           <div className="absolute inset-0 bg-black/50" />
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white animate-fade-in-up">
             <h1 className="mb-4 text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl">
               Clarity in Sight, Quality in Life
             </h1>
@@ -65,8 +65,8 @@ export default function Home() {
             <p className="mt-4 text-lg text-muted-foreground">
               For over 20 years, Tewarie Eye Centre has been a beacon of optical health in the community. Our commitment is to provide personalized, state-of-the-art eye care in a welcoming and professional environment. We believe in empowering our patients through education and providing them with the best possible outcomes.
             </p>
-            <Button asChild variant="link" className="mt-4 px-0 text-lg text-accent">
-              <Link href="/about">Learn More About Us <ArrowRight className="ml-2 h-5 w-5" /></Link>
+            <Button asChild variant="link" className="mt-4 px-0 text-lg text-accent group">
+              <Link href="/about">Learn More About Us <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" /></Link>
             </Button>
           </div>
           <div className="relative h-80 w-full overflow-hidden rounded-lg shadow-xl">
@@ -93,7 +93,7 @@ export default function Home() {
           {featuredServices.map(service => {
             const serviceImage = PlaceHolderImages.find(p => p.id === service.imageId);
             return (
-              <Card key={service.id} className="flex flex-col overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+              <Card key={service.id} className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
                 <CardHeader className="relative h-56 w-full p-0">
                   <Image 
                     src={serviceImage?.imageUrl ?? ''}
@@ -140,8 +140,8 @@ export default function Home() {
           <div className="mt-2 flex justify-center">
               {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />)}
           </div>
-          <Button asChild variant="link" className="mt-8 text-lg text-accent">
-            <Link href="/testimonials">Read More Testimonials <ArrowRight className="ml-2 h-5 w-5" /></Link>
+          <Button asChild variant="link" className="mt-8 text-lg text-accent group">
+            <Link href="/testimonials">Read More Testimonials <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" /></Link>
           </Button>
         </div>
       </section>

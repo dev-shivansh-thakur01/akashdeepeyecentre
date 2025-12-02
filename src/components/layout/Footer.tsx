@@ -16,9 +16,9 @@ export function Footer() {
               Your vision, our priority. Providing expert eye care for over two decades.
             </p>
             <div className="mt-4 flex space-x-4">
-              <Link href="#" className="text-muted-foreground hover:text-primary"><Twitter /></Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary"><Facebook /></Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary"><Instagram /></Link>
+              <Link href="#" className="text-muted-foreground transition-colors hover:text-primary"><Twitter /></Link>
+              <Link href="#" className="text-muted-foreground transition-colors hover:text-primary"><Facebook /></Link>
+              <Link href="#" className="text-muted-foreground transition-colors hover:text-primary"><Instagram /></Link>
             </div>
           </div>
           <div>
@@ -26,7 +26,7 @@ export function Footer() {
             <ul className="mt-4 space-y-2">
               {navLinks.map(link => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-muted-foreground hover:text-primary">{link.label}</Link>
+                  <Link href={link.href} className="text-muted-foreground transition-colors hover:text-primary">{link.label}</Link>
                 </li>
               ))}
             </ul>
@@ -34,10 +34,10 @@ export function Footer() {
           <div>
             <h3 className="font-headline font-semibold tracking-wider text-foreground">Services</h3>
             <ul className="mt-4 space-y-2">
-                <li><Link href="/services/cataract-surgery" className="text-muted-foreground hover:text-primary">Cataract Surgery</Link></li>
-                <li><Link href="/services/glaucoma-treatment" className="text-muted-foreground hover:text-primary">Glaucoma Treatment</Link></li>
-                <li><Link href="/services/laser-lasik-surgery" className="text-muted-foreground hover:text-primary">LASIK Surgery</Link></li>
-                <li><Link href="/services/retinal-care" className="text-muted-foreground hover:text-primary">Retinal Care</Link></li>
+                <li><Link href="/services/cataract-surgery" className="text-muted-foreground transition-colors hover:text-primary">Cataract Surgery</Link></li>
+                <li><Link href="/services/glaucoma-treatment" className="text-muted-foreground transition-colors hover:text-primary">Glaucoma Treatment</Link></li>
+                <li><Link href="/services/laser-lasik-surgery" className="text-muted-foreground transition-colors hover:text-primary">LASIK Surgery</Link></li>
+                <li><Link href="/services/retinal-care" className="text-muted-foreground transition-colors hover:text-primary">Retinal Care</Link></li>
             </ul>
           </div>
           <div>

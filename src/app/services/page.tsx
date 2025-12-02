@@ -19,7 +19,7 @@ export default function ServicesPage() {
           {services.map(service => {
             const serviceImage = PlaceHolderImages.find(p => p.id === service.imageId);
             return (
-              <Card key={service.id} className="flex flex-col overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+              <Card key={service.id} className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
                 <CardHeader className="relative h-56 w-full p-0">
                   {serviceImage && (
                     <Image

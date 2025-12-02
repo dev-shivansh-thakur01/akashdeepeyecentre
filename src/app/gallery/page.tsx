@@ -18,7 +18,7 @@ export default function GalleryPage() {
             const beforeImage = PlaceHolderImages.find(p => p.id === item.beforeImageId);
             const afterImage = PlaceHolderImages.find(p => p.id === item.afterImageId);
             return (
-              <Card key={item.id} className="overflow-hidden">
+              <Card key={item.id} className="overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
                 <CardHeader>
                   <CardTitle className="text-primary">{item.title}</CardTitle>
                   <CardDescription>{item.description}</CardDescription>
