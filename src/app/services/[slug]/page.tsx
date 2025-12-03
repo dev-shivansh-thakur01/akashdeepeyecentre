@@ -1,6 +1,5 @@
 import { services } from '@/lib/data';
 import { notFound } from 'next/navigation';
-import { generateServiceDetails } from '@/ai/flows/generate-service-details';
 import { PageHeader } from '@/components/PageHeader';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle, AlertTriangle, ShieldCheck } from 'lucide-react';
@@ -36,13 +35,6 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
   
   const serviceImage = PlaceHolderImages.find(p => p.id === service.imageId);
 
-  const aiResponse = await generateServiceDetails({ serviceName: service.title });
-  
-  const sections = aiResponse.details.split(/\n\s*\n/);
-  const benefits = sections.find(s => s.toLowerCase().includes('benefits:'))?.split('\n').slice(1) ?? [];
-  const risks = sections.find(s => s.toLowerCase().includes('risks:'))?.split('\n').slice(1) ?? [];
-  const procedure = sections.find(s => s.toLowerCase().includes('procedure:'))?.split('\n').slice(1) ?? [];
-
   return (
     <div>
       <PageHeader title={service.title} subtitle={service.longDescription} />
@@ -58,7 +50,7 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
                   alt={service.title}
                   data-ai-hint={serviceImage.imageHint}
                   layout="fill"
-                  className="object-cover rounded-t-lg"
+                  className="rounded-t-lg object-cover"
                 />
               </CardHeader>
             )}
@@ -66,10 +58,7 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
                 <CardTitle className="text-2xl text-primary">About the Procedure</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4 text-lg text-muted-foreground">
-                 {procedure.map((step, index) => (
-                   <p key={index}>{step.replace(/^-/, '').trim()}</p>
-                 ))}
-                 {!procedure.length && <p>{aiResponse.details}</p>}
+                 <p>{service.longDescription}</p>
               </CardContent>
             </Card>
           </div>
@@ -83,10 +72,10 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
-                  {benefits.map((benefit, index) => (
+                  {service.benefits?.map((benefit, index) => (
                     <li key={index} className="flex items-start gap-2">
                       <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-green-600" />
-                      <span>{benefit.replace(/^-/, '').trim()}</span>
+                      <span>{benefit}</span>
                     </li>
                   ))}
                 </ul>
@@ -101,10 +90,10 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
-                  {risks.map((risk, index) => (
+                  {service.risks?.map((risk, index) => (
                     <li key={index} className="flex items-start gap-2">
                       <AlertTriangle className="mt-1 h-5 w-5 flex-shrink-0 text-amber-600" />
-                      <span>{risk.replace(/^-/, '').trim()}</span>
+                      <span>{risk}</span>
                     </li>
                   ))}
                 </ul>

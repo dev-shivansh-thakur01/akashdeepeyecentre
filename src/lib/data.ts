@@ -19,6 +19,16 @@ export const services: Service[] = [
     longDescription: 'Our state-of-the-art cataract surgery removes the clouded lens and replaces it with a premium intraocular lens (IOL), restoring clear vision and often reducing the need for glasses.',
     icon: Eye,
     imageId: 'service-cataract',
+    benefits: [
+        "Restores clear vision",
+        "Reduces dependence on glasses",
+        "Improves quality of life"
+    ],
+    risks: [
+        "Infection",
+        "Inflammation",
+        "Retinal detachment"
+    ]
   },
   {
     id: 2,
@@ -28,6 +38,16 @@ export const services: Service[] = [
     longDescription: 'We provide comprehensive care for glaucoma, including early detection, medication management, and advanced surgical procedures to preserve your vision and prevent further damage.',
     icon: Shield,
     imageId: 'service-glaucoma',
+    benefits: [
+        "Prevents further vision loss",
+        "Lowers intraocular pressure",
+        "Personalized treatment plans"
+    ],
+    risks: [
+        "Redness or irritation",
+        "Blurred vision",
+        "Dry eyes"
+    ]
   },
   {
     id: 3,
@@ -37,6 +57,16 @@ export const services: Service[] = [
     longDescription: 'Experience the freedom of clear vision without glasses. Our LASIK and laser eye surgery options are customized to your unique eyes, using the latest technology for a safe and effective outcome.',
     icon: Gem,
     imageId: 'service-lasik',
+    benefits: [
+        "Corrects vision",
+        "Quick recovery",
+        "Reduces need for corrective eyewear"
+    ],
+    risks: [
+        "Dry eyes",
+        "Glare or halos",
+        "Undercorrections or overcorrections"
+    ]
   },
   {
     id: 4,
@@ -46,6 +76,16 @@ export const services: Service[] = [
     longDescription: 'Our retina specialists are equipped to diagnose and treat a wide range of conditions affecting the retina, including diabetic retinopathy, macular degeneration, and retinal detachments.',
     icon: BrainCircuit,
     imageId: 'service-retina',
+    benefits: [
+        "Prevents or slows disease progression",
+        "Preserves or improves vision",
+        "Manages chronic conditions"
+    ],
+    risks: [
+        "Floaters",
+        "Light sensitivity",
+        "Infection"
+    ]
   },
   {
     id: 5,
@@ -55,6 +95,16 @@ export const services: Service[] = [
     longDescription: 'Our comprehensive eye exams ensure an accurate prescription. We offer a wide selection of frames and lenses to suit your style and visual needs, from single vision to progressive lenses.',
     icon: Glasses,
     imageId: 'service-refraction',
+    benefits: [
+        "Accurate vision correction",
+        "Wide selection of eyewear",
+        "Expert fitting and adjustments"
+    ],
+    risks: [
+        "Eyestrain if prescription is incorrect",
+        "Difficulty adapting to new lenses",
+        "Frame discomfort"
+    ]
   },
   {
     id: 6,
@@ -64,6 +114,16 @@ export const services: Service[] = [
     longDescription: 'Beyond LASIK, we offer various refractive surgery options like PRK and ICL to correct nearsightedness, farsightedness, and astigmatism, tailored to your specific eye structure and lifestyle.',
     icon: Eye,
     imageId: 'service-refractive-surgery',
+    benefits: [
+        "Permanent vision correction",
+        "Suitable for a wider range of patients",
+        "High success rates"
+    ],
+    risks: [
+        "Longer recovery time than LASIK (for PRK)",
+        "Potential for halos or glare",
+        "Risk of infection"
+    ]
   },
 ];
 
