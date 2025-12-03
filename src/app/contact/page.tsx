@@ -10,53 +10,36 @@ export default function ContactPage() {
   const contactHeroImage = PlaceHolderImages.find(p => p.id === 'contact-hero');
   const mapImage = PlaceHolderImages.find(p => p.id === 'contact-map');
 
-
   return (
     <div>
-      <section className="relative h-[50vh] w-full">
-        {contactHeroImage && (
-            <Image
-                src={contactHeroImage.imageUrl}
-                alt={contactHeroImage.description}
-                data-ai-hint={contactHeroImage.imageHint}
-                fill
-                className="object-cover"
-            />
-        )}
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
-          <h1 className="text-4xl font-bold tracking-tight md:text-6xl">
-            Contact Us
-          </h1>
-          <p className="mt-2 text-lg">
-            <Link href="/" className="hover:underline">Home</Link> → Contact Us
-          </p>
-        </div>
-      </section>
+      <PageHeader
+        title="Contact Us"
+        subtitle="We're here to help. Reach out to us for any inquiries or to schedule an appointment."
+      />
 
       <section className="bg-secondary py-16 md:py-24">
         <div className="container mx-auto">
-            <div className="text-center">
-                <h2 className="text-3xl font-bold text-primary md:text-4xl">Our Locations</h2>
-                <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-                    We have several clinics to serve you. Find the one nearest to you.
-                </p>
-            </div>
-            <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
-                {locations.map((location) => (
-                    <Card key={location.name} className="flex flex-col text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-                        <CardHeader>
-                            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                                <MapPin className="h-8 w-8" />
-                            </div>
-                        </CardHeader>
-                        <CardContent className="flex-grow">
-                            <CardTitle className="text-xl text-primary">{location.name}</CardTitle>
-                            <p className="mt-2 text-muted-foreground">{location.address}</p>
-                        </CardContent>
-                    </Card>
-                ))}
-            </div>
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-primary md:text-4xl">Our Locations</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+              We have several clinics to serve you. Find the one nearest to you.
+            </p>
+          </div>
+          <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
+            {locations.map((location) => (
+              <Card key={location.name} className="flex flex-col text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                <CardHeader>
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                    <MapPin className="h-8 w-8" />
+                  </div>
+                  <CardTitle className="text-xl text-primary">{location.name}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <p className="text-muted-foreground">{location.address}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
