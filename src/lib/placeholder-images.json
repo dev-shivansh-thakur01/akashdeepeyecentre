@@ -1,0 +1,154 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-1",
+      "description": "A modern and welcoming eye clinic reception area.",
+      "imageUrl": "https://images.unsplash.com/photo-1691090339835-60288a93e1fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2xpbmljJTIwcmVjZXB0aW9ufGVufDB8fHx8MTc2NDY4NTg1OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "clinic reception"
+    },
+    {
+      "id": "hero-2",
+      "description": "A friendly optometrist consulting with a patient.",
+      "imageUrl": "https://images.unsplash.com/photo-1758656321519-02fb5f48dc7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxvcHRvbWV0cmlzdCUyMHBhdGllbnR8ZW58MHx8fHwxNzY0NjkwMjYzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "optometrist patient"
+    },
+    {
+      "id": "hero-3",
+      "description": "Advanced ophthalmic equipment in a clean examination room.",
+      "imageUrl": "https://images.unsplash.com/photo-1565428744974-f41cf79c05fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8b3BodGhhbG1pYyUyMGVxdWlwbWVudHxlbnwwfHx8fDE3NjQ2OTAyNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ophthalmic equipment"
+    },
+    {
+      "id": "contact-hero",
+      "description": "A young child getting an eye exam.",
+      "imageUrl": "https://images.unsplash.com/photo-1504629472332-9a27f607a5af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjaGlsZCUyMGV5ZSUyMGV4YW18ZW58MHx8fHwxNzY1Mjc1NTEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "child eye exam"
+    },
+    {
+      "id": "clinic-interior",
+      "description": "Bright and clean interior of the eye clinic waiting area.",
+      "imageUrl": "https://images.unsplash.com/photo-1665231795856-769fb08a90bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjbGluaWMlMjBpbnRlcmlvcnxlbnwwfHx8fDE3NjQ2MzUxNjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "clinic interior"
+    },
+    {
+      "id": "about-hero",
+      "description": "The professional team of doctors at Akashdeep Eye Centre.",
+      "imageUrl": "https://images.unsplash.com/photo-1638202993928-7267aad84c31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWVkaWNhbCUyMHRlYW18ZW58MHx8fHwxNzY0NjkwMjYzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "medical team"
+    },
+    {
+      "id": "team-1",
+      "description": "Portrait of Dr. Anjali Sharma, Chief Ophthalmologist.",
+      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkb2N0b3IlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjQ2MTYzMzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "doctor portrait"
+    },
+    {
+      "id": "team-2",
+      "description": "Portrait of Dr. Ben Carter, LASIK Specialist.",
+      "imageUrl": "https://images.unsplash.com/photo-1612349316228-5942a9b489c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkb2N0b3IlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjQ2MTYzMzN8MA&ixlibrb-4.1.0&q=80&w=1080",
+      "imageHint": "doctor portrait"
+    },
+    {
+      "id": "team-3",
+      "description": "Portrait of Dr. Chloe Davis, Pediatric Ophthalmologist.",
+      "imageUrl": "https://images.unsplash.com/photo-1612349316228-5942a9b489c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkb2N0b3IlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjQ2MTYzMzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "doctor portrait"
+    },
+    {
+      "id": "service-cataract",
+      "description": "Illustration showing cataract surgery procedure.",
+      "imageUrl": "https://images.unsplash.com/photo-1759813641406-980519f58b1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2F0YXJhY3QlMjBzdXJnZXJ5fGVufDB8fHx8MTc2NDY5MDI2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cataract surgery"
+    },
+    {
+      "id": "service-glaucoma",
+      "description": "Close-up of an eye being tested for glaucoma.",
+      "imageUrl": "https://images.unsplash.com/photo-1577596813504-9c54794acc0e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxnbGF1Y29tYSUyMHRlc3R8ZW58MHx8fHwxNzY0NjkwMjYzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "glaucoma test"
+    },
+    {
+      "id": "service-lasik",
+      "description": "Laser vision correction machine in operation.",
+      "imageUrl": "https://images.unsplash.com/photo-1526688442562-41eb8259db9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bGFzaWslMjBtYWNoaW5lfGVufDB8fHx8MTc2NDY5MDI2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "lasik machine"
+    },
+    {
+      "id": "service-retina",
+      "description": "Digital scan of a human retina.",
+      "imageUrl": "https://images.unsplash.com/photo-1579870706082-5a907e6ccc7f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxyZXRpbmElMjBzY2FufGVufDB8fHx8MTc2NDY5MDI2NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "retina scan"
+    },
+    {
+      "id": "service-refraction",
+      "description": "Optometrist performing an eye exam with a phoropter.",
+      "imageUrl": "https://images.unsplash.com/photo-1517948430535-1e2469d314fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxleWUlMjBleGFtfGVufDB8fHx8MTc2NDY1OTE0MXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "eye exam"
+    },
+    {
+      "id": "service-refractive-surgery",
+      "description": "A patient undergoing a refractive surgery procedure.",
+      "imageUrl": "https://images.unsplash.com/photo-1551601651-09492b5468b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxleWUlMjBzdXJnZXJ5fGVufDB8fHx8MTc2NDY5MTY0MHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "eye surgery"
+    },
+    {
+      "id": "testimonial-1",
+      "description": "Happy patient giving a testimonial.",
+      "imageUrl": "https://images.unsplash.com/photo-1733400316516-904674b0d1fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwYXRpZW50JTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY0NjU5MjU1fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "patient portrait"
+    },
+    {
+      "id": "testimonial-2",
+      "description": "Another satisfied patient.",
+      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc2NDY2NTY0OHww&ixlibrb-4.1.0&q=80&w=1080",
+      "imageHint": "person smiling"
+    },
+    {
+      "id": "testimonial-3",
+      "description": "Elderly patient with improved vision.",
+      "imageUrl": "https://images.unsplash.com/photo-1630250273516-94652c938900?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxlbGRlcmx5JTIwcGVyc29ufGVufDB8fHx8MTc2NDY0OTcwNHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "elderly person"
+    },
+    {
+      "id": "gallery-1-before",
+      "description": "Patient's vision before cataract surgery.",
+      "imageUrl": "https://images.unsplash.com/photo-1691435702806-17d0aa7b02e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxibHVycnklMjB2aXNpb258ZW58MHx8fHwxNzY0NjkwMjYzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "blurry vision"
+    },
+    {
+      "id": "gallery-1-after",
+      "description": "Patient's clear vision after cataract surgery.",
+      "imageUrl": "https://images.unsplash.com/photo-1761896892087-7e36f6abb684?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2xlYXIlMjB2aXNpb258ZW58MHx8fHwxNzY0NjkwMjYzfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "clear vision"
+    },
+    {
+      "id": "gallery-2-before",
+      "description": "Patient's eyesight before LASIK.",
+      "imageUrl": "https://images.unsplash.com/photo-1705357311681-17449eb278d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx2aXNpb24lMjBjaGFydHxlbnwwfHx8fDE3NjQ2OTAyNjd8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "vision chart"
+    },
+    {
+      "id": "gallery-2-after",
+      "description": "Patient's 20/20 vision after LASIK.",
+      "imageUrl": "https://images.unsplash.com/photo-1763828181685-5e55f0db0200?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzaGFycCUyMHZpc2lvbnxlbnwwfHx8fDE3NjQ2OTAyNjN8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "sharp vision"
+    },
+    {
+      "id": "gallery-3-before",
+      "description": "Eye with retinal issue before treatment.",
+      "imageUrl": "https://images.unsplash.com/photo-1709842272652-c9a343b63103?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkYW1hZ2VkJTIwcmV0aW5hfGVufDB8fHx8MTc2NDY5MDI2NHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "damaged retina"
+    },
+    {
+      "id": "gallery-3-after",
+      "description": "Healthy eye after successful retinal care.",
+      "imageUrl": "https://images.unsplash.com/photo-1648999291185-0ac34a6dc3ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxoZWFsdGh5JTIwZXllfGVufDB8fHx8MTc2NDY5MDI2M3ww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "healthy eye"
+    },
+    {
+      "id": "contact-map",
+      "description": "A map showing the location of the eye clinic.",
+      "imageUrl": "https://images.unsplash.com/photo-1581922819941-6ab31ab79afc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjaXR5JTIwbWFwfGVufDB8fHx8MTc2NDYyNjg4Nnww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "city map"
+    }
+  ]
+}
