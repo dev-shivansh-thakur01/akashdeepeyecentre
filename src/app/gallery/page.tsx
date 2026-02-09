@@ -1,15 +1,16 @@
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { PageHeader } from '@/components/PageHeader';
+import { HeroSection } from '@/components/ui/hero-section';
 import { galleryImages } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function GalleryPage() {
   return (
     <div>
-      <PageHeader
+      <HeroSection
         title="Before & After Gallery"
         subtitle="Witness the life-changing results our patients have experienced. These transformations showcase the expertise and care we provide."
+        breadcrumbs={[{ label: 'Gallery', href: '/gallery' }]}
       />
 
       <section className="container mx-auto py-16 md:py-24">
