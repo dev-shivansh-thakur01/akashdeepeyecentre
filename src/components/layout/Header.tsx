@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -16,12 +17,21 @@ export function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
 
-  // Handle scroll effect for glassmorphism intensity
+  // Optimized scroll handler with requestAnimationFrame
   React.useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
-    window.addEventListener('scroll', handleScroll);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -30,29 +40,33 @@ export function Header() {
       className={cn(
         "fixed top-0 z-50 w-full transition-all duration-300 border-b",
         scrolled
-          ? "bg-background/80 backdrop-blur-md border-border/50 shadow-sm py-3"
-          : "bg-transparent border-transparent py-5"
+          ? "bg-background/80 backdrop-blur-md border-border/50 shadow-sm py-2 lg:py-3"
+          : "bg-transparent border-transparent py-4 lg:py-5"
       )}
     >
       <div className="container mx-auto flex items-center justify-between px-4 md:px-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 z-50 group">
-          {/* Using Next.js Image for optimization since it's a local asset */}
-          <img
-            src={fullLogo.src}
-            alt="Akashdeep Eye Centre"
-            className="h-auto w-auto max-h-12 md:max-h-20 object-contain transition-transform group-hover:scale-105 "
-          />
+        <Link href="/" className="flex items-center gap-2 z-50 group relative">
+          <div className="relative h-10 w-auto md:h-14 lg:h-16 aspect-[3/1]">
+            <Image
+              src={fullLogo}
+              alt="Akashdeep Eye Centre"
+              fill
+              className="object-contain object-left transition-transform group-hover:scale-105"
+              sizes="(max-width: 768px) 150px, 200px"
+              priority
+            />
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6 lg:gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
-                "relative text-sm font-medium transition-colors hover:text-primary py-1 group",
+                "relative text-sm font-medium transition-colors hover:text-primary py-1 group tracking-wide",
                 pathname === link.href ? "text-primary" : "text-muted-foreground"
               )}
             >
@@ -67,7 +81,7 @@ export function Header() {
 
         {/* CTA Button */}
         <div className="hidden md:flex items-center gap-4">
-          <Button asChild className="rounded-full px-6 bg-gradient-to-r from-primary to-blue-600 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300">
+          <Button asChild className="rounded-full px-6 bg-gradient-to-r from-primary to-blue-600 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 shadow-md">
             <Link href="/booking">Book Appointment</Link>
           </Button>
         </div>
@@ -97,7 +111,7 @@ export function Header() {
                 </Link>
               ))}
               <div className="mt-6 pt-6 border-t border-muted">
-                <Button asChild className="w-full rounded-full bg-gradient-to-r from-primary to-blue-600" size="lg">
+                <Button asChild className="w-full rounded-full bg-gradient-to-r from-primary to-blue-600 shadow-lg" size="lg">
                   <Link href="/booking" onClick={() => setIsOpen(false)}>Book Appointment</Link>
                 </Button>
               </div>

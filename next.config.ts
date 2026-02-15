@@ -4,10 +4,10 @@ const nextConfig: NextConfig = {
   /* config options here */
   distDir: '.next_new',
   typescript: {
-    ignoreBuildErrors: true,
+    // ignoreBuildErrors: true, // Removed for production readiness
   },
   eslint: {
-    ignoreDuringBuilds: true,
+    // ignoreDuringBuilds: true, // Removed for production readiness
   },
   images: {
     remotePatterns: [

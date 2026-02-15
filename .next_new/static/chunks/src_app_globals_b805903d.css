@@ -493,10 +493,6 @@ body {
   left: -5%;
 }
 
-.left-\[12\.5\%\] {
-  left: 12.5%;
-}
-
 .left-\[40\%\] {
   left: 40%;
 }
@@ -591,10 +587,6 @@ body {
 
 .-z-10 {
   z-index: -10;
-}
-
-.z-0 {
-  z-index: 0;
 }
 
 .z-10 {
@@ -809,6 +801,10 @@ body {
   display: none;
 }
 
+.aspect-\[3\/1\] {
+  aspect-ratio: 3;
+}
+
 .aspect-square {
   aspect-ratio: 1;
 }
@@ -820,6 +816,10 @@ body {
 .size-4 {
   width: 1rem;
   height: 1rem;
+}
+
+.h-0\.5 {
+  height: .125rem;
 }
 
 .h-1 {
@@ -998,10 +998,6 @@ body {
   height: 100svh;
 }
 
-.max-h-12 {
-  max-height: 3rem;
-}
-
 .max-h-96 {
   max-height: 24rem;
 }
@@ -1032,6 +1028,10 @@ body {
 
 .w-0 {
   width: 0;
+}
+
+.w-0\.5 {
+  width: .125rem;
 }
 
 .w-1 {
@@ -1204,10 +1204,6 @@ body {
 
 .w-\[500px\] {
   width: 500px;
-}
-
-.w-\[75\%\] {
-  width: 75%;
 }
 
 .w-auto {
@@ -1627,6 +1623,10 @@ body {
   overflow: hidden;
 }
 
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
 .scroll-smooth {
   scroll-behavior: smooth;
 }
@@ -2041,12 +2041,6 @@ body {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.from-muted {
-  --tw-gradient-from: hsl(var(--muted)) var(--tw-gradient-from-position);
-  --tw-gradient-to: hsl(var(--muted) / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
 .from-primary {
   --tw-gradient-from: hsl(var(--primary)) var(--tw-gradient-from-position);
   --tw-gradient-to: hsl(var(--primary) / 0) var(--tw-gradient-to-position);
@@ -2140,6 +2134,11 @@ body {
   --tw-gradient-stops: var(--tw-gradient-from), hsl(var(--primary) / .2) var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
+.via-primary\/30 {
+  --tw-gradient-to: hsl(var(--primary) / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), hsl(var(--primary) / .3) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
 .via-white\/10 {
   --tw-gradient-to: #fff0 var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), #ffffff1a var(--tw-gradient-via-position), var(--tw-gradient-to);
@@ -2171,10 +2170,6 @@ body {
 
 .to-gray-800 {
   --tw-gradient-to: #1f2937 var(--tw-gradient-to-position);
-}
-
-.to-muted {
-  --tw-gradient-to: hsl(var(--muted)) var(--tw-gradient-to-position);
 }
 
 .to-orange-500\/20 {
@@ -2243,6 +2238,10 @@ body {
 
 .object-cover {
   object-fit: cover;
+}
+
+.object-left {
+  object-position: left;
 }
 
 .p-0 {
@@ -2372,11 +2371,6 @@ body {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
 }
 
 .py-6 {
@@ -3051,6 +3045,10 @@ body {
   transition-timing-function: linear;
 }
 
+.will-change-transform {
+  will-change: transform;
+}
+
 @keyframes enter {
   from {
     opacity: var(--tw-enter-opacity, 1);
@@ -3125,6 +3123,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-headline);
+  letter-spacing: -.025em;
 }
 
 .file\:border-0::file-selector-button {
@@ -3547,12 +3546,20 @@ h1, h2, h3, h4, h5, h6 {
   color: hsl(var(--primary));
 }
 
+.group:hover .group-hover\:text-primary\/70 {
+  color: hsl(var(--primary) / .7);
+}
+
 .group\/menu-item:hover .group-hover\/menu-item\:opacity-100, .group:hover .group-hover\:opacity-100 {
   opacity: 1;
 }
 
 .group:hover .group-hover\:opacity-60 {
   opacity: .6;
+}
+
+.group:hover .group-hover\:opacity-90 {
+  opacity: .9;
 }
 
 .group.destructive .group-\[\.destructive\]\:border-muted\/40 {
@@ -4196,8 +4203,8 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 
-  .md\:max-h-20 {
-    max-height: 5rem;
+  .md\:h-14 {
+    height: 3.5rem;
   }
 
   .md\:max-w-\[420px\] {
@@ -4336,6 +4343,14 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
   }
 
+  .lg\:hidden {
+    display: none;
+  }
+
+  .lg\:h-16 {
+    height: 4rem;
+  }
+
   .lg\:h-\[500px\] {
     height: 500px;
   }
@@ -4362,6 +4377,20 @@ h1, h2, h3, h4, h5, h6 {
 
   .lg\:gap-20 {
     gap: 5rem;
+  }
+
+  .lg\:gap-8 {
+    gap: 2rem;
+  }
+
+  .lg\:py-3 {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+  }
+
+  .lg\:py-5 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
   }
 
   .lg\:text-left {

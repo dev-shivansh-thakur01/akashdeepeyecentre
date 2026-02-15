@@ -1,11 +1,9 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { ScrollAnimation } from '@/components/ui/scroll-animation';
-import { Card, CardContent } from '@/components/ui/card';
 import { FileSearch, Sparkles, HeartPulse, Stethoscope } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { motion } from 'framer-motion';
 
 const steps = [
     {
@@ -36,14 +34,20 @@ const steps = [
 
 export function ProcessJourney() {
     const [activeStep, setActiveStep] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
+    const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setActiveStep((prev) => (prev + 1) % steps.length);
-        }, 3000); // Change step every 3 seconds
+        if (!isPaused) {
+            intervalRef.current = setInterval(() => {
+                setActiveStep((prev) => (prev + 1) % steps.length);
+            }, 3000);
+        }
 
-        return () => clearInterval(interval);
-    }, []);
+        return () => {
+            if (intervalRef.current) clearInterval(intervalRef.current);
+        };
+    }, [isPaused]);
 
     return (
         <section className="py-20 md:py-28 overflow-hidden bg-background">
@@ -59,39 +63,53 @@ export function ProcessJourney() {
                     </div>
                 </ScrollAnimation>
 
-                <div className="relative">
+                <div
+                    className="relative"
+                    onMouseEnter={() => setIsPaused(true)}
+                    onMouseLeave={() => setIsPaused(false)}
+                >
+                    {/* Connecting Line - Desktop (Horizontal) */}
+                    <div className="hidden lg:block absolute top-[56px] left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-primary/30 to-transparent -z-10" />
 
-                    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+                    {/* Connecting Line - Mobile (Vertical) */}
+                    <div className="lg:hidden absolute left-[50%] top-0 w-0.5 h-full bg-gradient-to-b from-transparent via-primary/30 to-transparent -translate-x-1/2 -z-10" />
+
+                    <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
                         {steps.map((step, idx) => {
                             const isActive = idx === activeStep;
                             return (
-                                <div key={step.id} className="relative flex flex-col items-center text-center group">
-
+                                <div
+                                    key={step.id}
+                                    className="relative flex flex-col items-center text-center group cursor-pointer"
+                                    onClick={() => setActiveStep(idx)}
+                                >
                                     {/* Icon Circle */}
                                     <div
                                         className={cn(
                                             "relative flex h-28 w-28 items-center justify-center rounded-full border-4 bg-background transition-all duration-500 mb-8 z-10",
-                                            isActive ? "border-primary shadow-[0_0_30px_rgba(var(--primary-rgb),0.3)] scale-110" : "border-muted group-hover:border-primary/50"
+                                            isActive
+                                                ? "border-primary shadow-[0_0_30px_rgba(var(--primary-rgb),0.3)] scale-110"
+                                                : "border-muted group-hover:border-primary/50 group-hover:scale-105"
                                         )}
                                     >
                                         <step.icon
                                             className={cn(
                                                 "h-10 w-10 transition-all duration-500",
-                                                isActive ? "text-primary" : "text-muted-foreground"
+                                                isActive ? "text-primary" : "text-muted-foreground group-hover:text-primary/70"
                                             )}
                                         />
                                         {/* Ripple Effect for active */}
                                         {isActive && (
-                                            <span className="absolute inset-0 rounded-full animate-ping bg-primary/20 opacity-75" />
+                                            <span className="absolute inset-0 rounded-full animate-ping bg-primary/20 opacity-75 duration-1000" />
                                         )}
                                     </div>
 
                                     {/* Content */}
-                                    <div className={cn("transition-opacity duration-500", isActive ? "opacity-100" : "opacity-70")}>
+                                    <div className={cn("transition-opacity duration-500", isActive ? "opacity-100" : "opacity-70 group-hover:opacity-90")}>
                                         <h3 className={cn("text-xl font-bold mb-3", isActive ? "text-primary" : "text-foreground")}>
                                             {step.id}. {step.title}
                                         </h3>
-                                        <p className="text-muted-foreground leading-relaxed">
+                                        <p className="text-muted-foreground leading-relaxed max-w-xs mx-auto">
                                             {step.description}
                                         </p>
                                     </div>

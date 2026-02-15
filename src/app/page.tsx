@@ -31,10 +31,10 @@ export default function Home() {
         rightContent={
           /* Visual Element - Premium Glassmorphism Cards */
           <div className="relative w-full h-[500px]">
-            {/* Animated mesh gradient background */}
-            <div className="absolute inset-0 opacity-30">
-              <div className="absolute top-0 right-0 w-72 h-72 bg-accent/40 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
-              <div className="absolute bottom-0 left-0 w-72 h-72 bg-primary/40 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000" />
+            {/* Animated mesh gradient background - Optimized with will-change-transform */}
+            <div className="absolute inset-0 opacity-30 select-none pointer-events-none">
+              <div className="absolute top-0 right-0 w-72 h-72 bg-accent/40 rounded-full mix-blend-multiply filter blur-3xl animate-pulse will-change-transform" />
+              <div className="absolute bottom-0 left-0 w-72 h-72 bg-primary/40 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000 will-change-transform" />
             </div>
 
             <ScrollAnimation animation="scale-up" duration={0.8}>
@@ -44,7 +44,7 @@ export default function Home() {
               {/* Orbiting process cards container */}
               <div className="absolute top-1/3 left-1/3 -translate-x-1/2 -translate-y-1/2">
                 {/* Card 1: Consultation (12 o'clock - 0°) */}
-                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-orbit-clockwise" style={{ animationDelay: '0s' }}>
+                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-orbit-clockwise will-change-transform" style={{ animationDelay: '0s' }}>
                   <div className="w-48 backdrop-blur-xl bg-gradient-to-br from-white/80 to-white/60 dark:from-slate-800/80 dark:to-slate-900/60 border-2 border-white/60 dark:border-white/20 rounded-2xl p-4 shadow-2xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300">
                     <div className="h-11 w-11 rounded-xl bg-gradient-to-br from-accent to-teal-500 flex items-center justify-center mb-3 shadow-lg text-white">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -57,7 +57,7 @@ export default function Home() {
                 </div>
 
                 {/* Card 2: Diagnosis (3 o'clock - 90°) */}
-                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-orbit-clockwise" style={{ animationDelay: '-10s' }}>
+                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-orbit-clockwise will-change-transform" style={{ animationDelay: '-10s' }}>
                   <div className="w-48 backdrop-blur-xl bg-gradient-to-br from-white/80 to-white/60 dark:from-slate-800/80 dark:to-slate-900/60 border-2 border-white/60 dark:border-white/20 rounded-2xl p-4 shadow-2xl hover:shadow-primary/30 hover:scale-105 transition-all duration-300">
                     <div className="h-11 w-11 rounded-xl bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center mb-3 shadow-lg text-white">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -70,7 +70,7 @@ export default function Home() {
                 </div>
 
                 {/* Card 3: Treatment (6 o'clock - 180°) */}
-                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-orbit-clockwise" style={{ animationDelay: '-20s' }}>
+                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-orbit-clockwise will-change-transform" style={{ animationDelay: '-20s' }}>
                   <div className="w-48 backdrop-blur-xl bg-gradient-to-br from-white/80 to-white/60 dark:from-slate-800/80 dark:to-slate-900/60 border-2 border-white/60 dark:border-white/20 rounded-2xl p-4 shadow-2xl hover:shadow-blue-500/30 hover:scale-105 transition-all duration-300">
                     <div className="h-11 w-11 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mb-3 shadow-lg text-white">
                       <Eye size={22} />
@@ -81,7 +81,7 @@ export default function Home() {
                 </div>
 
                 {/* Card 4: AfterCare (9 o'clock - 270°) */}
-                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-orbit-clockwise" style={{ animationDelay: '-30s' }}>
+                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-orbit-clockwise will-change-transform" style={{ animationDelay: '-30s' }}>
                   <div className="w-48 backdrop-blur-xl bg-gradient-to-br from-white/80 to-white/60 dark:from-slate-800/80 dark:to-slate-900/60 border-2 border-white/60 dark:border-white/20 rounded-2xl p-4 shadow-2xl hover:shadow-teal-500/30 hover:scale-105 transition-all duration-300">
                     <div className="h-11 w-11 rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center mb-3 shadow-lg text-white">
                       <Shield size={22} />
@@ -103,6 +103,7 @@ export default function Home() {
                       width={110}
                       height={110}
                       className="object-contain drop-shadow-2xl"
+                      priority
                     />
                   </div>
                 </div>

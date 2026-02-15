@@ -1,9 +1,9 @@
 "use client";
 
-import { motion, useInView, UseInViewOptions, Variant } from "framer-motion";
-import { useRef } from "react";
+import { motion, useInView, UseInViewOptions, Variant, Variants } from "framer-motion";
+import { useRef, useMemo } from "react";
 
-type AnimationType = 
+type AnimationType =
   | "fade-in"
   | "slide-up"
   | "slide-left"
@@ -60,22 +60,24 @@ export function ScrollAnimation({
 
   const selectedAnimation = animations[animation] || animations["slide-up"];
 
+  const variants: Variants = useMemo(() => ({
+    hidden: selectedAnimation.hidden,
+    visible: {
+      ...selectedAnimation.visible,
+      transition: {
+        duration,
+        delay,
+        ease: "easeOut",
+      },
+    },
+  }), [selectedAnimation, duration, delay]);
+
   return (
     <motion.div
       ref={ref}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      variants={{
-        hidden: selectedAnimation.hidden,
-        visible: {
-          ...selectedAnimation.visible,
-          transition: {
-            duration,
-            delay,
-            ease: "easeOut",
-          },
-        },
-      }}
+      variants={variants}
       className={className}
     >
       {children}
