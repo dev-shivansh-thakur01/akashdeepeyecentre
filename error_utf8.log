@@ -1,0 +1,6 @@
+﻿.next/types/app/services/[slug]/page.ts(34,29): error TS2344: Type 'ServiceDetailPageProps' does not satisfy the constraint 'PageProps'.
+  Types of property 'params' are incompatible.
+    Type '{ slug: string; }' is missing the following properties from type 'Promise<any>': then, catch, finally, [Symbol.toStringTag]
+.next/types/app/services/[slug]/page.ts(38,31): error TS2344: Type 'ServiceDetailPageProps' does not satisfy the constraint 'PageProps'.
+  Types of property 'params' are incompatible.
+    Type '{ slug: string; }' is missing the following properties from type 'Promise<any>': then, catch, finally, [Symbol.toStringTag]

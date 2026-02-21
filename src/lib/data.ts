@@ -5,8 +5,6 @@ export const navLinks: NavLink[] = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About Us' },
   { href: '/services', label: 'Services' },
-  { href: '/gallery', label: 'Gallery' },
-  { href: '/testimonials', label: 'Testimonials' },
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -20,14 +18,14 @@ export const services: Service[] = [
     icon: Eye,
     imageId: 'service-cataract',
     benefits: [
-        "Restores clear vision",
-        "Reduces dependence on glasses",
-        "Improves quality of life"
+      "Restores clear vision",
+      "Reduces dependence on glasses",
+      "Improves quality of life"
     ],
     risks: [
-        "Infection",
-        "Inflammation",
-        "Retinal detachment"
+      "Infection",
+      "Inflammation",
+      "Retinal detachment"
     ]
   },
   {
@@ -39,14 +37,14 @@ export const services: Service[] = [
     icon: Shield,
     imageId: 'service-glaucoma',
     benefits: [
-        "Prevents further vision loss",
-        "Lowers intraocular pressure",
-        "Personalized treatment plans"
+      "Prevents further vision loss",
+      "Lowers intraocular pressure",
+      "Personalized treatment plans"
     ],
     risks: [
-        "Redness or irritation",
-        "Blurred vision",
-        "Dry eyes"
+      "Redness or irritation",
+      "Blurred vision",
+      "Dry eyes"
     ]
   },
   {
@@ -58,14 +56,14 @@ export const services: Service[] = [
     icon: Gem,
     imageId: 'service-lasik',
     benefits: [
-        "Corrects vision",
-        "Quick recovery",
-        "Reduces need for corrective eyewear"
+      "Corrects vision",
+      "Quick recovery",
+      "Reduces need for corrective eyewear"
     ],
     risks: [
-        "Dry eyes",
-        "Glare or halos",
-        "Undercorrections or overcorrections"
+      "Dry eyes",
+      "Glare or halos",
+      "Undercorrections or overcorrections"
     ]
   },
   {
@@ -77,14 +75,14 @@ export const services: Service[] = [
     icon: BrainCircuit,
     imageId: 'service-retina',
     benefits: [
-        "Prevents or slows disease progression",
-        "Preserves or improves vision",
-        "Manages chronic conditions"
+      "Prevents or slows disease progression",
+      "Preserves or improves vision",
+      "Manages chronic conditions"
     ],
     risks: [
-        "Floaters",
-        "Light sensitivity",
-        "Infection"
+      "Floaters",
+      "Light sensitivity",
+      "Infection"
     ]
   },
   {
@@ -96,14 +94,14 @@ export const services: Service[] = [
     icon: Glasses,
     imageId: 'service-refraction',
     benefits: [
-        "Accurate vision correction",
-        "Wide selection of eyewear",
-        "Expert fitting and adjustments"
+      "Accurate vision correction",
+      "Wide selection of eyewear",
+      "Expert fitting and adjustments"
     ],
     risks: [
-        "Eyestrain if prescription is incorrect",
-        "Difficulty adapting to new lenses",
-        "Frame discomfort"
+      "Eyestrain if prescription is incorrect",
+      "Difficulty adapting to new lenses",
+      "Frame discomfort"
     ]
   },
   {
@@ -115,14 +113,14 @@ export const services: Service[] = [
     icon: Eye,
     imageId: 'service-refractive-surgery',
     benefits: [
-        "Permanent vision correction",
-        "Suitable for a wider range of patients",
-        "High success rates"
+      "Permanent vision correction",
+      "Suitable for a wider range of patients",
+      "High success rates"
     ],
     risks: [
-        "Longer recovery time than LASIK (for PRK)",
-        "Potential for halos or glare",
-        "Risk of infection"
+      "Longer recovery time than LASIK (for PRK)",
+      "Potential for halos or glare",
+      "Risk of infection"
     ]
   },
 ];
@@ -169,50 +167,104 @@ export const testimonials: Testimonial[] = [
 ];
 
 export const galleryImages: GalleryImage[] = [
-    {
-        id: 1,
-        title: "Cataract Surgery Results",
-        description: "Clarity restored after a successful cataract removal and lens implant.",
-        beforeImageId: "gallery-1-before",
-        afterImageId: "gallery-1-after"
-    },
-    {
-        id: 2,
-        title: "LASIK Transformation",
-        description: "From blurry vision to 20/20 sharpness with our advanced LASIK procedure.",
-        beforeImageId: "gallery-2-before",
-        afterImageId: "gallery-2-after"
-    },
-    {
-        id: 3,
-        title: "Retinal Treatment",
-        description: "A healthy retina after specialized treatment for a degenerative condition.",
-        beforeImageId: "gallery-3-before",
-        afterImageId: "gallery-3-after"
-    }
+  {
+    id: 1,
+    title: "Cataract Surgery Results",
+    description: "Clarity restored after a successful cataract removal and lens implant.",
+    beforeImageId: "gallery-1-before",
+    afterImageId: "gallery-1-after"
+  },
+  {
+    id: 2,
+    title: "LASIK Transformation",
+    description: "From blurry vision to 20/20 sharpness with our advanced LASIK procedure.",
+    beforeImageId: "gallery-2-before",
+    afterImageId: "gallery-2-after"
+  },
+  {
+    id: 3,
+    title: "Retinal Treatment",
+    description: "A healthy retina after specialized treatment for a degenerative condition.",
+    beforeImageId: "gallery-3-before",
+    afterImageId: "gallery-3-after"
+  }
 ]
 
 export const aboutPageStats = [
-    { icon: Users, value: "10,000+", label: "Happy Patients" },
-    { icon: Briefcase, value: "20+", label: "Years of Experience" },
-    { icon: HeartHandshake, value: "5,000+", label: "Successful Surgeries" },
-    { icon: BookOpen, value: "15+", label: "Published Researches" },
+  { icon: Users, value: "10,000+", label: "Happy Patients" },
+  { icon: Briefcase, value: "20+", label: "Years of Experience" },
+  { icon: HeartHandshake, value: "5,000+", label: "Successful Surgeries" },
+  { icon: BookOpen, value: "15+", label: "Published Researches" },
 ];
 
 export const locations: Location[] = [
-    {
-        name: "Vasundhara(GZB)",
-        address: "G 27, Uttranchal Plaza 2, Sector 3, Vasundhara, Ghaziabad, Uttar Pradesh 201012"
-    },
-    {
-        name: "Yamuna Vihar(Delhi)",
-        address: " DDA MARKET, C 4/152, opposite C 5, Block C, Yamuna Vihar, Delhi, 110053"
-    }
+  {
+    name: "Vasundhara(GZB)",
+    address: "G 27, Uttranchal Plaza 2, Sector 3, Vasundhara, Ghaziabad, Uttar Pradesh 201012"
+  },
+  {
+    name: "Yamuna Vihar(Delhi)",
+    address: " DDA MARKET, C 4/152, opposite C 5, Block C, Yamuna Vihar, Delhi, 110053"
+  }
 ];
 
 export const contactDetails = {
-    address: '123 Vision Lane, Clarity City, 12345',
-    phone: '+91 9582096481',
-    email: 'akashdeepeyecentre@gmail.com',
-    mapLink: 'https://maps.google.com'
+  address: '123 Vision Lane, Clarity City, 12345',
+  phone: '+91 9582096481',
+  email: 'akashdeepeyecentre@gmail.com',
+  mapLink: 'https://maps.google.com'
 }
+
+export type FaqItem = {
+  question: string;
+  answer: string;
+};
+
+export const generalFaqs: FaqItem[] = [
+  {
+    question: "What insurance plans do you accept?",
+    answer: "We accept most major insurance plans. Please contact our front desk to verify if your specific provider is covered."
+  },
+  {
+    question: "How often should I have an eye exam?",
+    answer: "We recommend a comprehensive eye exam every 1-2 years, or more frequently if you have existing eye conditions or are over the age of 60."
+  },
+  {
+    question: "Do you offer emergency eye care?",
+    answer: "Yes, we prioritize eye emergencies. Please call us immediately or visit our clinic if you are experiencing sudden vision loss, pain, or injury."
+  },
+  {
+    question: "How long does a typical appointment take?",
+    answer: "A routine eye exam typically takes about 45 minutes to an hour. Specialist consultations or dilation may require more time."
+  }
+];
+
+export const serviceFaqs: FaqItem[] = [
+  {
+    question: "Is LASIK surgery painful?",
+    answer: "LASIK is virtually painless. We use numbing drops to ensure your comfort. You may feel some slight pressure, but no pain."
+  },
+  {
+    question: "What is the recovery time for cataract surgery?",
+    answer: "Most patients experience improved vision within 24 hours. Full healing can take a few weeks, but you can typically return to normal activities within a few days."
+  },
+  {
+    question: "Am I a candidate for refractive surgery?",
+    answer: "The best way to determine this is through a consultation. We assess your corneal thickness, prescription stability, and overall eye health."
+  }
+];
+
+export const contactFaqs: FaqItem[] = [
+  {
+    question: "Is there parking available?",
+    answer: "Yes, we have ample parking available for our patients at both of our locations."
+  },
+  {
+    question: "What should I bring to my appointment?",
+    answer: "Please bring your ID, insurance card, current glasses or contacts, and a list of any medications you are taking."
+  },
+  {
+    question: "Can I book appointments online?",
+    answer: "Absolutely! You can use our online booking form or call us directly to schedule your visit."
+  }
+];

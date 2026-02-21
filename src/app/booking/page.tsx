@@ -1,13 +1,14 @@
-import { PageHeader } from '@/components/PageHeader';
+import { HeroSection } from '@/components/ui/hero-section';
 import { BookingForm } from '@/components/BookingForm';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function BookingPage() {
   return (
     <div>
-      <PageHeader
+      <HeroSection
         title="Book an Appointment"
         subtitle="Take the first step towards clearer vision. Fill out the form below to request an appointment with one of our specialists."
+        breadcrumbs={[{ label: 'Book Appointment', href: '/booking' }]}
       />
 
       <section className="container mx-auto max-w-2xl py-16 md:py-24">

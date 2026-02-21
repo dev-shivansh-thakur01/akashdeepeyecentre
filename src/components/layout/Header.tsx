@@ -1,83 +1,123 @@
 "use client";
 
+import * as React from 'react';
 import Link from 'next/link';
-import Image from "next/image";
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Eye, Menu } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { navLinks } from '@/lib/data';
 import { cn } from '@/lib/utils';
-import * as React from "react";
-import halfLogo from "@/assets/images/full_logo.png";
+import { Button } from '@/components/ui/button';
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet';
+import { Menu, Phone } from 'lucide-react';
+import { navLinks } from '@/lib/data';
+
+import fullLogo from '@/assets/images/full_logo.png';
 
 export function Header() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = React.useState(false);
+  const [scrolled, setScrolled] = React.useState(false);
+
+  // Optimized scroll handler with requestAnimationFrame
+  React.useEffect(() => {
+    let ticking = false;
+
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center">
-        <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Image
-      src={halfLogo}
-    alt="Akashdeep Eye Centre"
-     width={120}
-        height={120}
-    priority
-  />
+    <header
+      className={cn(
+        "fixed top-0 z-50 w-full transition-all duration-300 border-b",
+        scrolled
+          ? "bg-background/80 backdrop-blur-md border-border/50 shadow-sm py-2 lg:py-3"
+          : "bg-transparent border-transparent py-4 lg:py-5"
+      )}
+    >
+      <div className="container mx-auto flex items-center justify-between px-4 md:px-6">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2 z-50 group relative">
+          <div className="relative h-10 w-auto md:h-14 lg:h-16 aspect-[3/1]">
+            <Image
+              src={fullLogo}
+              alt="Akashdeep Eye Centre"
+              fill
+              className="object-contain object-left transition-transform group-hover:scale-105"
+              sizes="(max-width: 768px) 150px, 200px"
+              priority
+            />
+          </div>
         </Link>
-        <nav className="hidden items-center gap-1 text-sm font-medium md:flex">
-          {navLinks.map(link => (
+
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center gap-6 lg:gap-8">
+          {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
-                'rounded-md px-3 py-2 transition-colors hover:bg-accent hover:text-accent-foreground',
-                pathname === link.href ? 'bg-accent text-accent-foreground' : 'text-foreground/60'
+                "relative text-sm font-medium transition-colors hover:text-primary py-1 group tracking-wide",
+                pathname === link.href ? "text-primary" : "text-muted-foreground"
               )}
             >
               {link.label}
+              <span className={cn(
+                "absolute bottom-0 left-0 w-full h-[2px] bg-primary scale-x-0 transition-transform duration-300 origin-right group-hover:origin-left group-hover:scale-x-100",
+                pathname === link.href && "scale-x-100 origin-left"
+              )} />
             </Link>
           ))}
         </nav>
-        <div className="flex flex-1 items-center justify-end gap-4">
-          <Button asChild className="hidden sm:flex bg-accent text-accent-foreground hover:bg-accent/90">
+
+        {/* CTA Button */}
+        <div className="hidden md:flex items-center gap-4">
+          <Button asChild className="rounded-full px-6 bg-gradient-to-r from-primary to-blue-600 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 shadow-md">
             <Link href="/booking">Book Appointment</Link>
           </Button>
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild>
-              <Button variant="outline" size="icon" className="md:hidden">
-                <Menu className="h-4 w-4" />
-                <span className="sr-only">Toggle navigation menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="left">
-              <Link href="/" className="mr-6 flex items-center space-x-2">
-                <Eye className="h-6 w-6 text-primary" />
-                <span className="font-bold">Akashdeep Eye Centre</span>
-              </Link>
-              <div className="mt-6 flex flex-col space-y-4">
-                {navLinks.map(link => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className={cn(
-                        'text-lg',
-                        pathname === link.href ? 'text-foreground' : 'text-foreground/60'
-                    )}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-                <Button asChild className="mt-4 bg-accent text-accent-foreground hover:bg-accent/90">
-                    <Link href="/booking" onClick={() => setIsOpen(false)}>Book Appointment</Link>
+        </div>
+
+        {/* Mobile Navigation */}
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
+          <SheetTrigger asChild className="md:hidden">
+            <Button variant="ghost" size="icon" className="relative z-50">
+              <Menu className="h-6 w-6" />
+              <span className="sr-only">Toggle menu</span>
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="right" className="w-[300px] sm:w-[400px] pt-12">
+            <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+            <nav className="flex flex-col gap-6">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className={cn(
+                    "text-lg font-medium transition-colors hover:text-primary",
+                    pathname === link.href ? "text-primary" : "text-muted-foreground"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <div className="mt-6 pt-6 border-t border-muted">
+                <Button asChild className="w-full rounded-full bg-gradient-to-r from-primary to-blue-600 shadow-lg" size="lg">
+                  <Link href="/booking" onClick={() => setIsOpen(false)}>Book Appointment</Link>
                 </Button>
               </div>
-            </SheetContent>
-          </Sheet>
-        </div>
+            </nav>
+          </SheetContent>
+        </Sheet>
       </div>
     </header>
   );
