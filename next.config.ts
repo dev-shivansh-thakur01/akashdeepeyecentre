@@ -2,7 +2,6 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   /* config options here */
-  distDir: '.next_new',
   typescript: {
     // ignoreBuildErrors: true, // Removed for production readiness
   },

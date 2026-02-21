@@ -30,8 +30,8 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# vercel
-.vercel
+# netlify
+.netlify
 
 # typescript
 *.tsbuildinfo
@@ -42,13 +42,6 @@ next-env.d.ts
 
 # firebase
 firebase-debug.log
-
-# custom build output
-/.next_new/
-.next_new/
-
-# IDE
-.idx/
 
 # logs
 error_utf8.log
